@@ -1,0 +1,12 @@
+name: liiga-budgets
+title: liiga-budgets
+username:
+account: vesakaup
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3218463
+bundleId: 3852878
+url: https://vesakaup.shinyapps.io/liiga-budgets/
+when: 1605199427.01401
+asMultiple: FALSE
+asStatic: FALSE
