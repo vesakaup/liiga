@@ -26,20 +26,7 @@ shinyServer(function(input, output) {
     
     
   })
-  output$slope <- renderText({
-    ls<- selectedData() %>% na.omit() %>% group_by(team)%>%
-      summarize(budget = round(sum(budget)/1000000,3), ppg=sum(points)/sum(games),
-                seasons = round(games/60), avg_budget=budget/seasons)
-    lm(ppg~avg_budget, data=ls)[[1]][[2]]
-    
-    
-  })
-  output$intercept <- renderText({
-    ls<- selectedData() %>% na.omit() %>% group_by(team)%>%
-      summarize(budget = round(sum(budget)/1000000,3), ppg=sum(points)/sum(games),
-                seasons = round(games/60), avg_budget=budget/seasons) 
-    lm(ppg~avg_budget, data=ls)[[1]][[1]]
-  })
+
   
   output$table <- renderTable({
     ls<- selectedData() %>% na.omit() %>% group_by(team)%>%

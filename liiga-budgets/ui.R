@@ -21,10 +21,7 @@ shinyUI(fluidPage(
             h5("Source: liiga.fi & jatkoaika.com"),
             h5("A linear regression line is plotted."),
             plotOutput("plot1"),
-            h4("Slope"),
-            textOutput('slope'),
-            h4('Intercept'),
-            textOutput('intercept'),
+          
          
             
         )

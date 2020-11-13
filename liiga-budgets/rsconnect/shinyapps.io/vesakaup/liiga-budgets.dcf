@@ -5,8 +5,8 @@ account: vesakaup
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3218463
-bundleId: 3856239
+bundleId: 3856288
 url: https://vesakaup.shinyapps.io/liiga-budgets/
-when: 1605268693.82676
+when: 1605269769.95254
 asMultiple: FALSE
 asStatic: FALSE
