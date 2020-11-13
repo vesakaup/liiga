@@ -26,20 +26,15 @@ shinyServer(function(input, output) {
     
     
   })
-
+  
   
   output$table <- renderTable({
     ls<- selectedData() %>% na.omit() %>% group_by(team)%>%
-      summarize(seasons= as.integer(ceiling(games/60)), points=sum(points), ppg=points/games, avg_budget=round(sum(budget/seasons)/1000000,3), ppg=points/games)%>% arrange(desc(points))
-               
-    ls
+      summarize(games=sum(games),seasons= as.integer(ceiling(round(games/60))), points=sum(points),
+      ppg=points/games, avg_budget=(sum(budget)/seasons)/1000000)%>% select(-games)%>%arrange(desc(points))
+    
+     ls
   })
   
-  
-  
-  
-  
-  
-  
-  
 })
+
