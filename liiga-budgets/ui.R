@@ -3,6 +3,7 @@ library(ggplot2)
 library(dplyr, warn.conflicts = FALSE)
 options(dplyr.summarise.inform = FALSE)
 liigabudget<-readRDS('./data/liiga.rds')
+liigabudget <-liigabudget %>% filter(!(season=='2020-2021'))
 
 shinyUI(fluidPage(
     titlePanel("Liiga teams' budgets and ppg in selected seasons"),
